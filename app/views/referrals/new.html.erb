@@ -1,0 +1,9 @@
+<%= form_for @referral do |f| %>
+<% @referral.attributes.each do |a| %>
+	<% if @tags.include?(a[0])  %>
+		<%= f.label "#{a[0]}".to_sym %>	
+		<%= f.text_field "#{a[0]}".to_sym %>
+
+<% end %>
+<% end %>
+<% end %>
