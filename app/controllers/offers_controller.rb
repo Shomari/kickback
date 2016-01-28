@@ -9,6 +9,7 @@ class OffersController < ApplicationController
 	end
 
 	def show
+    @referral = Referral.create
 	end
 
 	private

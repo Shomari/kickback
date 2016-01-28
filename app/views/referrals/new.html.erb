@@ -1,9 +1,11 @@
-<%= form_for @referral do |f| %>
+<%= form_for [@offer, @referral] do |f| %>
+<%= @referral.offer.description %>
 <% @referral.attributes.each do |a| %>
-	<% if @tags.include?(a[0])  %>
-		<%= f.label "#{a[0]}".to_sym %>	
-		<%= f.text_field "#{a[0]}".to_sym %>
+    <% if @tags.include?(a[0])  %>
+        <%= f.label "#{a[0]}".to_sym %> 
+        <%= f.text_field "#{a[0]}".to_sym %>
+<% end %>
+<% end %>
+        <%= f.submit %>
 
-<% end %>
-<% end %>
 <% end %>
